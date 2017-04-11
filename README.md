@@ -1,6 +1,11 @@
-### Create your own Messenger Bot from Zero to Hereo
+# Thunderbot - Your simple Facebook Messenger Boilerplate
 
+
+<center>
 ![ThunderBot Logo](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/ThunderBot_brand.png "ThunderBot Logo")
+</center>
+
+### Create your own Messenger Bot from Zero to Hero
 
 
 You can use the [editor on GitHub](https://github.com/jamaity-tn/ThunderBot-Boilerplate/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
