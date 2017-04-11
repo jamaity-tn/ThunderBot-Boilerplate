@@ -1,6 +1,6 @@
 ### Create your own Messenger Bot from Zero to Hereo
 
-[[https://github.com/jamaity-tn/ThunderBot-Boilerplate/blob/master/logo.png|alt=ThunderBot]]
+[https://github.com/jamaity-tn/ThunderBot-Boilerplate/blob/master/logo.png|alt=ThunderBot]
 
 
 
