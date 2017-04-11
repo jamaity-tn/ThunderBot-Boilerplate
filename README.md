@@ -1,9 +1,8 @@
 # Thunderbot - Your simple Facebook Messenger Boilerplate
 
 
-<center>
 ![ThunderBot Logo](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/ThunderBot_brand.png "ThunderBot Logo")
-</center>
+
 
 ### Create your own Messenger Bot from Zero to Hero
 
