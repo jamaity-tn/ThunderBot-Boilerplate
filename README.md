@@ -135,4 +135,10 @@ The main development process will be concentrated on the index.php file which al
 
 You can find almost all of those templates implemented with samples.
 
+<hr>
+
+#### ThunderBot Boilerplate is brought to you by Open Jamaity
+
+![Open Jamaity](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/images/open_jamaity_brand_horizontal.png "Open Jamaity")
+
 
