@@ -50,16 +50,6 @@ You are up !
 You can now use the ngrok url as Facebook Messenger webhook. Beware that the ngrok url is changing each time you execute ngrok command, so make sure to update the webhook url.
 
 
-<h3>C - Develop / Test / Repeat</h3>
-
-In order to inspect requests that are received and sent to Facebook Messenger, you can access: http://localhost:4040/ after running the Ngrok command.
-
-To test you're receiving updates via the Webhook, simply send a message to your page. You can do that from your page on facebook.com, the Facebook mobile app, searching your page on Messenger, or using your Messenger short url **https://m.me/PAGE_USERNAME**.
-
-If you don't receive an update via your Webhook, please ensure you didn't receive any errors when you setup your Webhook and you subscribed your App to your page.
-
-
-
 
 <h2 id="step2">2 - Config your Facebook App for Messenger Account</h2>
 
@@ -123,30 +113,26 @@ If successful, you will receive a response:
 }
 ```
 
-<h2 id="step3">3 - Config your Facebook App for Messenger Account</h2>
+<h2 id="step3">3 - Start handling conversation with peoples</h2>
 
 
-
-```markdown
-Syntax highlighted code block
+To test you're receiving updates via the Webhook, simply send a message to your page. You can do that from your page on facebook.com, the Facebook mobile app, searching your page on Messenger, or using your Messenger short url **https://m.me/PAGE_USERNAME**.
 
 
+If you don't receive an update via your Webhook, please ensure you didn't receive any errors when you setup your Webhook and you subscribed your App to your page.
+
+In order to inspect requests that are received and sent to Facebook Messenger, you can access: http://localhost:4040/ after running the Ngrok command.
+
+You should now see the first replies of your bot to messages like: "hello", "me"...
 
 
-# Header 1
-## Header 2
-### Header 3
+<h3>Develop / Test / Repeat</h3>
 
-- Bulleted
-- List
+The main development process will be concentrated on the index.php file which always do the same 3 main steps:
+1 - Verify the integrity and security of the data received
+2 - Get the message / payload
+3 - Return the appropriate result (SWITCH blocks) according [to preformatted templates made by Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/send-api-reference/templates)
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
+You can find almost all of those templates implemented with samples.
 
 
