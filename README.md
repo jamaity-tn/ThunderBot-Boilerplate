@@ -6,6 +6,12 @@
 
 ### Create your own Messenger Bot from Zero to Hero
 
+Creating your first Messenger Bot from Zero will be as easy as 1, 2, 3...
+
+1. Config your Facebook App for Messenger Account
+2. Bootstrap your local development environment
+3. Start handling conversation with peoples
+
 
 You can use the [editor on GitHub](https://github.com/jamaity-tn/ThunderBot-Boilerplate/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
