@@ -21,9 +21,44 @@ You can use the [editor on GitHub](https://github.com/jamaity-tn/ThunderBot-Boil
 
 Go ahead and [Create a Facebook Fan page](https://www.facebook.com/pages/create/), you can also use an existing page you admin. 
 
+Make sure that "Messenger" producted is on under "Product Settings".
+
 ![Create Facebook Messenger App](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/images/thunderbot-step1.png "Create Facebook Messenger App")
 
+<h3>B - Setup a Webhook</h3>
 
+Webhooks are used to send you a variety of different events including messages, authentication events and callback events from messages.
+
+In the Messenger Platform tab, find the Webhooks section and click Setup Webhooks. Enter a URL for a webhook, define a Verify Token and select *message_deliveries*, *messages*, *messaging_optins*, and *messaging_postbacks* under Subscription Fields.
+
+![Webhook Config](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/images/thunderbot-step2.png "Webhook Config")
+
+At your webhook URL (url to your **/index.php**), add code for verification. Your code should expect the Verify Token you previously defined, and respond with the *challenge* sent back in the verification request. Click the "Verify and Save" button in the New Page Subscription to call your webhook with a *GET* request.
+
+You can find all the details related to the Webhook by [following this link](https://developers.facebook.com/docs/messenger-platform/webhook-reference#setup).
+
+
+<h3>C - Get a page access token</h3>
+A Page Access Token is based on an app, page and user and has scopes associated with it. In the developer app, go to the Messenger tab. Select your page and generate a token:
+
+
+![Page access token](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/images/thunderbot-step3.png "Page access token")
+
+This will generate a non-expiring Page Access Token with the *manage_pages*, *pages_messaging*, and *pages_messaging_phone_number* scopes. Save this token as it will be used throughout your integration. You must be an admin on the page in order to generate a valid page access token.
+
+
+<h3>D - Subscribe the App to a Page</h3>
+
+In order for your webhook to receive events for a specific page, you must subscribe your app to the page. You can do this in the Webhooks section under the Messenger Tab.
+
+
+![Page Subscription](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/images/thunderbot-step4.png "Page Subscription")
+
+Or you can do this via API by using your Page Access Token and making a *POST* request to **/me/subscribed_apps**
+
+```markdown
+curl -X POST "https://graph.facebook.com/v2.8/me/subscribed_apps?access_token=**PAGE_ACCESS_TOKEN**"
+```markdown
 
 <h2 id="step2">2 - Bootstrap your local development environment</h2>
 
