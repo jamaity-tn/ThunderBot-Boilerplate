@@ -106,9 +106,10 @@ In order for your webhook to receive events for a specific page, you must subscr
 
 ![Page Subscription](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/images/thunderbot-step4.png "Page Subscription")
 
+
 Or you can do this via API by using your Page Access Token and making a *POST* request to **/me/subscribed_apps**
 
-
+You can use tools like [Postman](https://www.getpostman.com/) to get easily this done.
 
 ```markdown
 curl -X POST "https://graph.facebook.com/v2.8/me/subscribed_apps?access_token=**PAGE_ACCESS_TOKEN**"
