@@ -49,8 +49,10 @@ You are up !
 
 You can now use the ngrok url as Facebook Messenger webhook. Beware that the ngrok url is changing each time you execute ngrok command, so make sure to update the webhook url.
 
+
 <h3>C - Develop / Test / Repeat</h3>
 
+In order to inspect requests that are received and sent to Facebook Messenger, you can access: http://localhost:4040/ after running the Ngrok command.
 
 To test you're receiving updates via the Webhook, simply send a message to your page. You can do that from your page on facebook.com, the Facebook mobile app, searching your page on Messenger, or using your Messenger short url **https://m.me/PAGE_USERNAME**.
 
@@ -61,6 +63,7 @@ If you don't receive an update via your Webhook, please ensure you didn't receiv
 
 <h2 id="step2">2 - Config your Facebook App for Messenger Account</h2>
 
+In this section, we will simply follow the Facebook Messenger Plateform quick start accessible [following this link](https://developers.facebook.com/docs/messenger-platform/guides/quick-start).
 
 <h3>A - Create an App and a Page</h3>
 
