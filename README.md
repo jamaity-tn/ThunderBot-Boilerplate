@@ -81,7 +81,7 @@ In the Messenger Platform tab, find the Webhooks section and click Setup Webhook
 
 ![Webhook Config](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/images/thunderbot-step2.png "Webhook Config")
 
-At your webhook URL (url to your **/index.php**), add code for verification. Your code should expect the Verify Token you previously defined, and respond with the *challenge* sent back in the verification request. Click the "Verify and Save" button in the New Page Subscription to call your webhook with a *GET* request.
+Add your webhook URL (**Ngrok generated secure url https://RANDOM.ngrok.com/ **/), add code for verification. Your code should expect the Verify Token you previously defined, and respond with the *challenge* sent back in the verification request. Click the "Verify and Save" button in the New Page Subscription to call your webhook with a *GET* request.
 
 #### Important:
 Since the Webhook only accepts HTTP**S** urls, we recommand to install NGROK locally in order to test your bot under development mode (Go to *Step 1/A* to know how) 
