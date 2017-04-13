@@ -35,6 +35,10 @@ In the Messenger Platform tab, find the Webhooks section and click Setup Webhook
 
 At your webhook URL (url to your **/index.php**), add code for verification. Your code should expect the Verify Token you previously defined, and respond with the *challenge* sent back in the verification request. Click the "Verify and Save" button in the New Page Subscription to call your webhook with a *GET* request.
 
+#### Important:
+Since the Webhook only accepts HTTP**S** urls, we recommand to install NGROK locally in order to test your bot under development mode (Go to *Step 2/B* to know how) 
+
+
 You can find all the details related to the Webhook by [following this link](https://developers.facebook.com/docs/messenger-platform/webhook-reference#setup).
 
 
@@ -56,23 +60,47 @@ In order for your webhook to receive events for a specific page, you must subscr
 
 Or you can do this via API by using your Page Access Token and making a *POST* request to **/me/subscribed_apps**
 
+
+
 ```markdown
 curl -X POST "https://graph.facebook.com/v2.8/me/subscribed_apps?access_token=**PAGE_ACCESS_TOKEN**"
-```markdown
+```
 
+If successful, you will receive a response:
+
+```markdown
+{
+  "success": true
+}
+```
 <h2 id="step2">2 - Bootstrap your local development environment</h2>
 
+<h3>A - Install the Boilerplate</h3>
+
+
+Open a terminal / CMD window and type the command and you are up !
+
+```markdown
+php -S localhost:1337
+```
+
+<h3>B - Install a HTTPS Tunnel</h3>
+
+Using HTTP**S** is required to communicate with Facebook Messenger, and the easiest way to get it on development mode is to use **NGROK**
+
+
+
+<h3>C - Develop / Test / Repeat</h3>
+
+
+To test you're receiving updates via the Webhook, simply send a message to your page. You can do that from your page on facebook.com, the Facebook mobile app, searching your page on Messenger, or using your Messenger short url **https://m.me/PAGE_USERNAME**.
+
+If you don't receive an update via your Webhook, please ensure you didn't receive any errors when you setup your Webhook and you subscribed your App to your page.
 
 
 <h2 id="step3">3 - Config your Facebook App for Messenger Account</h2>
 
 
-
-### Markdown
-
-(#step1)
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
@@ -96,14 +124,4 @@ Syntax highlighted code block
 ```
 
 
-<h3 id="hello-world">Hello World</h3>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jamaity-tn/ThunderBot-Boilerplate/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
