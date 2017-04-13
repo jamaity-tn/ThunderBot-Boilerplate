@@ -4,7 +4,7 @@
 
 ### Create your own Messenger Bot from Zero to Hero
 
-Creating your first Messenger Bot from Zero will be as easy as 1, 2, 3...
+Creating your first Messenger Bot from Zero will be as easy as 1, 2, 3... 10 Minutes
 
 1. [Config your Facebook App for Messenger Account ](.#step1)
 2. [Bootstrap your local development environment ](.#step2)
@@ -36,7 +36,7 @@ In the Messenger Platform tab, find the Webhooks section and click Setup Webhook
 At your webhook URL (url to your **/index.php**), add code for verification. Your code should expect the Verify Token you previously defined, and respond with the *challenge* sent back in the verification request. Click the "Verify and Save" button in the New Page Subscription to call your webhook with a *GET* request.
 
 #### Important:
-Since the Webhook only accepts HTTP**S** urls, we recommand to install NGROK locally in order to test your bot under development mode (Go to *Step 2/B* to know how) 
+Since the Webhook only accepts HTTP**S** urls, we recommand to install NGROK locally in order to test your bot under development mode (Go to *Step 2/A* to know how) 
 
 
 You can find all the details related to the Webhook by [following this link](https://developers.facebook.com/docs/messenger-platform/webhook-reference#setup).
@@ -75,22 +75,39 @@ If successful, you will receive a response:
 ```
 <h2 id="step2">2 - Bootstrap your local development environment</h2>
 
-<h3>A - Install the Boilerplate</h3>
 
-
-Open a terminal / CMD window and type the command and you are up !
-
-```markdown
-php -S localhost:1337
-```
-
-<h3>B - Install a HTTPS Tunnel</h3>
+<h3>A - Install a HTTPS Tunnel</h3>
 
 Using HTTP**S** is required to communicate with Facebook Messenger, and the easiest way to get it on development mode is to use **NGROK**
 
 ![NGROK](https://github.com/jamaity-tn/ThunderBot-Boilerplate/raw/master/images/ngrok.png "NGROK")
 
+You can follow the instruction [to download and install NGROK](https://ngrok.com/download).
 
+
+<h3>B - Install the Boilerplate</h3>
+
+1 - Download the ThunderBot boilerplate
+
+```markdown
+git clone https://github.com/jamaity-tn/ThunderBot-Boilerplate
+```
+
+2 - Run the local server:
+
+```markdown
+php -S localhost:1337
+```
+
+3 - Deploy the https tunnel
+
+```markdown
+ngrok http 1337
+```
+
+You are up !
+
+You can now use the ngrok url as Facebook Messenger webhook. Beware that the ngrok url is changing each time you execute ngrok command, so make sure to update the webhook url.
 
 <h3>C - Develop / Test / Repeat</h3>
 
